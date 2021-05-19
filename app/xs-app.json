@@ -1,0 +1,8 @@
+{
+  "authenticationMethod": "none",
+  "routes": [{
+	      "source": "/raas-data/(.*)",
+	        "destination": "srv-api",
+	          "csrfProtection": true
+    }]
+}
