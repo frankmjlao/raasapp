@@ -1,8 +1,20 @@
 {
-  "authenticationMethod": "none",
-  "routes": [{
-	      "source": "/raas-data/(.*)",
-	        "destination": "srv-api",
-	          "csrfProtection": true
-    }]
+    "authenticationMethod": "route",
+    "routes": [
+        {
+            "source": "/raas-data/(.*)",
+            "destination": "srv-api",
+            "csrfProtection": true
+        },
+        {
+            "source": "^/user-api(.*)",
+            "target": "$1",
+            "service": "sap-approuter-userapi"
+        },
+        {
+            "source": "/(.*)",
+            "localDir": ".",
+            "authenticationType": "xsuaa"
+        }
+    ]
 }

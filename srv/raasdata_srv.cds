@@ -1,6 +1,8 @@
 using app.raasdata from '../db/raasdata';
 using WSTRANSACTIONVIEW from '../db/raasdata';
 
+@requires: 'authenticated-user'
+
 service RaasDataService {
 
  entity Interactions_Header
