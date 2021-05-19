@@ -1,0 +1,8 @@
+{
+  "WS_TRANSACTION": {
+    "target": {
+      "object": "WS_TRANSACTION",
+      "schema": "RAASUSER"
+    }
+  }
+}
